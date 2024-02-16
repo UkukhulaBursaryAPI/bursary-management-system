@@ -140,7 +140,7 @@ GO
 ------------------------------------BursaryDetails Table----------------------------------
 CREATE TABLE [dbo].[YearlyBursaryDetails]
 (
-  [BursaryDetailsID] INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+  [BursaryDetailsID] INT IDENTITY(2022,1) NOT NULL PRIMARY KEY,
   [YearBudget] MONEY NOT NULL,
   [CapAmountPerStudent] MONEY NOT NULL
 );

@@ -14,3 +14,7 @@ GO
 ALTER TABLE [dbo].[StudentBursaryApplication]
   ADD CONSTRAINT [FK_StudentID_Application] FOREIGN KEY([StudentID]) REFERENCES [dbo].[Student](StudentID)
 GO
+
+ALTER TABLE [dbo].[StudentBursaryApplication]
+  ADD CONSTRAINT [FK_StatusID_Application] FOREIGN KEY([StatusID]) REFERENCES [dbo].[ApplicationStatus](StatusID)
+GO

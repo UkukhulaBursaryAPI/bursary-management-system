@@ -41,3 +41,7 @@ DROP TABLE IF EXISTS [dbo].[ApplicationStatus];
 
 -- Drop Bursary Details table
 DROP TABLE IF EXISTS [dbo].[YearlyBursaryDetails];
+
+DROP PROCEDURE IF EXISTS [dbo].uspAddBBDAdmin
+DROP PROCEDURE IF EXISTS [dbo].uspAddUniversity
+DROP PROCEDURE IF EXISTS [dbo].uspAddHOD

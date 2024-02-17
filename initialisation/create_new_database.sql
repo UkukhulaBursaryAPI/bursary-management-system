@@ -1,3 +1,6 @@
+--USE Ukukhula;
+--GO;
+
 -----------------------------------------------------ApplicationStatusTable----------------
 CREATE TABLE [dbo].[ApplicationStatus]
 (
@@ -6,6 +9,8 @@ CREATE TABLE [dbo].[ApplicationStatus]
 );
 GO
 
+INSERT INTO [dbo].[ApplicationStatus] (Status) VALUES ('Pending'),('Accepted'),('Rejected')
+GO
 ------------------Contact table-------------------------
 CREATE TABLE [dbo].[Contact]
 (
@@ -23,6 +28,8 @@ CREATE TABLE [dbo].[Race]
   CONSTRAINT [PK_Race]
     PRIMARY KEY CLUSTERED (RaceID ASC)
 )
+GO
+INSERT INTO dbo.[Race]([RaceName]) VALUES ('African'),('Indian'),('Colored')
 GO
 
 -----------------------------User Table-----------------------------------
@@ -49,6 +56,9 @@ CREATE TABLE [dbo].[Department]
 )
 GO
 
+INSERT INTO [dbo].[Department] VALUES ('ComputerScience'),('GameDevelopment'),('Engineering')
+GO
+
 
 ----------------------------------University----------------------------------------
 
@@ -59,7 +69,7 @@ CREATE TABLE [dbo].[University]
   [UserID] INT NOT NULL,
 
 );
-
+GO
 
 ALTER TABLE [dbo].[University]
  ADD CONSTRAINT [FK_USER_UNIVERSITY] FOREIGN KEY([UserID]) REFERENCES [dbo].[User]([UserID])
@@ -255,3 +265,23 @@ GO
 --------------------------Create all the required tables--------------------------------------------------
 
 
+SELECT * FROM [dbo].ApplicationStatus
+SELECT * FROM [dbo].[Contact]
+SELECT * FROM [dbo].[Race]
+SELECT * FROM [dbo].[User]
+SELECT * FROM [dbo].[Department]
+SELECT * FROM [dbo].[University]
+SELECT * FROM [dbo].[Student]
+SELECT * FROM [dbo].[BBDAdministrator]
+SELECT * FROM [dbo].[HeadOfDepartment]
+SELECT * FROM [dbo].[YearlyBursaryDetails]
+SELECT * FROM [dbo].[UniversityApplication]
+SELECT * FROM [dbo].[YearlyUniversityAllocation]
+SELECT * FROM [dbo].[StudentBursaryApplication]
+SELECT * FROM [dbo].[StudentBursaryDocuments]
+
+
+
+
+
+ 

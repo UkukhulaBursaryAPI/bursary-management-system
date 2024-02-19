@@ -139,3 +139,15 @@ SET @DepartmentID = FLOOR(RAND() * 3) + 1;
  SET @Counter2 = @Counter2 + 1
 END
 
+DECLARE @Counter3 INT
+SET @Counter3 = 1
+
+
+WHILE @Counter3 <= 15
+BEGIN
+
+INSERT INTO [dbo].[UniversityApplication]([UniversityID],[Motivation]) VALUES (@Counter3,'')
+
+SET @Counter3 = @Counter3 + 1
+END
+

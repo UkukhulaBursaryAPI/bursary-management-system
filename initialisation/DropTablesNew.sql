@@ -45,3 +45,5 @@ DROP TABLE IF EXISTS [dbo].[YearlyBursaryDetails];
 DROP PROCEDURE IF EXISTS [dbo].uspAddBBDAdmin
 DROP PROCEDURE IF EXISTS [dbo].uspAddUniversity
 DROP PROCEDURE IF EXISTS [dbo].uspAddHOD
+
+-- DROP DATABASE IF EXISTS Ukukhula

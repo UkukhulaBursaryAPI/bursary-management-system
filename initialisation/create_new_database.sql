@@ -1,5 +1,10 @@
---USE Ukukhula;
---GO;
+--USE master
+--GO
+--CREATE DATABASE Ukukhula
+--GO
+
+--USE Ukukhula
+--GO
 
 -----------------------------------------------------ApplicationStatusTable----------------
 CREATE TABLE [dbo].[ApplicationStatus]
@@ -278,9 +283,12 @@ SELECT * FROM [dbo].[YearlyBursaryDetails]
 SELECT * FROM [dbo].[UniversityApplication]
 SELECT * FROM [dbo].[YearlyUniversityAllocation]
 SELECT * FROM [dbo].[StudentBursaryApplication]
+INNER JOIN [dbo].Student ON [dbo].[StudentBursaryApplication].StudentID = [dbo].Student.StudentID
+INNER JOIN [dbo].University ON [dbo].Student.UniversityID = [dbo].University.UniversityID
 SELECT * FROM [dbo].[StudentBursaryDocuments]
 
-
+--INSERT INTO [dbo].[StudentBursaryApplication] (ApplicationMotivation,ApplicationRejectionReason,BursaryAmount,StudentID,AverageMark,BursaryDetailsID,HeadOfDepartmentID,StatusID,ApplicationDate) 
+--VALUES ('FEES MUST FALL','APPLICATION APPROVED',125000,29,80,2024,1,2,'2024-01-24')
 
 
 
